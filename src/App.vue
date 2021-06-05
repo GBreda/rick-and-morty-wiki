@@ -1,7 +1,6 @@
 <template>
-  <div>
-    <span>Teste</span>
-  </div>
+  <router-view />
 </template>
 
 <script src="./app.js"></script>
+<style src="./app.scss" lang="scss" scoped></style>
