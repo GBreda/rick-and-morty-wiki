@@ -1,0 +1,14 @@
+.base-button {
+  all: unset;
+  border: 2px solid $white;
+  border-radius: 8px;
+  color: $white;
+  font-weight: $bold;
+  padding: 10px 16px;
+
+  &:hover {
+    border-color: $yellow;
+    color: $yellow;
+    box-shadow: 0px 6px 7px 0px #cbd73640;
+  }
+}
