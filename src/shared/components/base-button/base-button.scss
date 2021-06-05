@@ -1,10 +1,10 @@
 .base-button {
-  all: unset;
   border: 2px solid $white;
   border-radius: 8px;
   color: $white;
   font-weight: $bold;
   padding: 10px 16px;
+  transition: $transition;
 
   &:hover {
     border-color: $yellow;

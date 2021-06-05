@@ -1,13 +1,12 @@
 <template>
-  <div>
-    <div class="container">
-      <img
-        class="container__logo"
-        src="@/assets/img/logo.svg"
-        alt="Rick and Morty logo"
-      />
+  <div class="container">
+    <div class="container__logo">
+      <img src="../../assets/img/logo.svg" alt="Rick and Morty logo" />
     </div>
-    <base-button>Search</base-button>
+    <div class="container__search">
+      <search-input />
+      <base-button>Search</base-button>
+    </div>
   </div>
 </template>
 

@@ -1,8 +1,14 @@
 .container {
-  display: flex;
-  justify-content: center;
-
   &__logo {
     padding-top: 38px;
+    width: 502px;
+    height: 215px;
+    margin: auto;
+  }
+
+  &__search {
+    display: flex;
+    justify-content: center;
+    padding-top: 74px;
   }
 }

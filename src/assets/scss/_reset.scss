@@ -7,3 +7,8 @@ html {
   height: 100%;
   box-sizing: border-box;
 }
+
+button,
+input[type='text'] {
+  all: unset;
+}
