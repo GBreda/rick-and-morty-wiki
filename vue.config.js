@@ -1,4 +1,4 @@
 module.exports = {
   publicPath:
-    process.env.NODE_ENV === 'production' ? '/rick-and-morty-wiki/' : '/',
+    process.env.NODE_ENV === 'production' ? process.env.PUBLIC_PATH : '/',
 };
