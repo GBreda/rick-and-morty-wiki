@@ -11,7 +11,7 @@
           type="text"
           v-model="searchInput"
         />
-        <button class="search__button">Search</button>
+        <button class="button">Search</button>
       </form>
     </div>
     <sheet></sheet>

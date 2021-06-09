@@ -39,14 +39,3 @@ export default {
     },
   },
 };
-
-// async fetchServices() {
-//   const { data } = await this.$apollo.query({
-//     query: CLOUD_MGMT_AVAILABLE_SERVICES,
-//     variables: {
-//       provider_Iexact: this.cloudName,
-//     },
-//   });
-
-//   this.servicesList = data.cloudMgmtAvailableServices.results;
-// },

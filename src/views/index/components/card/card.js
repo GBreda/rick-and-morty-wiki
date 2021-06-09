@@ -1,3 +1,6 @@
+import gql from 'graphql-tag';
+import { mapActions } from 'vuex';
+
 export default {
   name: 'card',
   props: {
@@ -16,8 +19,23 @@ export default {
     },
   },
   methods: {
-    openSheet() {
-      this.$emit('openSheet', this.character);
+    ...mapActions(['setCharacter', 'toggleCharacterSheet']),
+    async openSheet() {
+      const { data } = await this.$apollo.query({
+        query: gql`
+          query character($id: ID!) {
+            character(id: $id) {
+              name
+            }
+          }
+        `,
+        variables: {
+          id: this.character.id,
+        },
+      });
+
+      this.setCharacter(data.character);
+      this.toggleCharacterSheet(true);
     },
   },
 };
