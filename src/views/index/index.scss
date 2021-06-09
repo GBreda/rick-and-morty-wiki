@@ -1,14 +1,20 @@
 .container {
   &__logo {
     padding-top: 38px;
-    width: 502px;
-    height: 215px;
-    margin: auto;
+    display: flex;
+    justify-content: center;
   }
 
   &__search {
     display: flex;
     justify-content: center;
-    padding-top: 74px;
+    padding-top: 75px;
+  }
+
+  &__cards {
+    margin: 100px 235px;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 }

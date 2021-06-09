@@ -7,6 +7,13 @@
       <search-input />
       <base-button>Search</base-button>
     </div>
+    <div class="container__cards">
+      <card
+        v-for="character in characters"
+        :character="character"
+        :key="character.id"
+      ></card>
+    </div>
   </div>
 </template>
 
