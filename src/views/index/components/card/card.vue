@@ -1,5 +1,9 @@
 <template>
-  <div class="card" :style="{ backgroundImage: `url(${character.image})` }">
+  <div
+    class="card"
+    :style="{ backgroundImage: `url(${character.image})` }"
+    @click="openSheet"
+  >
     <div class="card__content">
       <h2 class="card__content__title card__content__title--color">
         {{ character.name | textShortener }}

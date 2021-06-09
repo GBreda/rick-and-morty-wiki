@@ -1,44 +1,52 @@
 import gql from 'graphql-tag';
-import BaseButton from '../../shared/components/base-button/base-button.vue';
-import SearchInput from './components/search-input/search-input.vue';
 import Card from './components/card/card.vue';
+import Sheet from './components/sheet/sheet.vue';
 
 export default {
   name: 'home',
   components: {
-    BaseButton,
-    SearchInput,
     Card,
+    Sheet,
   },
   data() {
     return {
+      searchInput: '',
       characters: [],
     };
   },
-  apollo: {
-    characters: {
-      query: gql`
-        query characters($page: Int, $filter: FilterCharacter) {
-          characters(page: $page, filter: $filter) {
-            results {
-              id
-              name
-              image
-              status
-              species
+  methods: {
+    async searchCharacter() {
+      const { data } = await this.$apollo.query({
+        query: gql`
+          query characters($page: Int, $filter: FilterCharacter) {
+            characters(page: $page, filter: $filter) {
+              results {
+                id
+                name
+                image
+                status
+                species
+              }
             }
           }
-        }
-      `,
-      variables() {
-        return {
-          page: 1,
-          filter: { name: 'Rick' },
-        };
-      },
-      result({ data }) {
-        this.characters = data.characters.results;
-      },
+        `,
+        variables: {
+          filter: { name: this.searchInput },
+        },
+      });
+
+      this.characters = data.characters.results;
     },
   },
 };
+
+// async fetchServices() {
+//   const { data } = await this.$apollo.query({
+//     query: CLOUD_MGMT_AVAILABLE_SERVICES,
+//     variables: {
+//       provider_Iexact: this.cloudName,
+//     },
+//   });
+
+//   this.servicesList = data.cloudMgmtAvailableServices.results;
+// },
