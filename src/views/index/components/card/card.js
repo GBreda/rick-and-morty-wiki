@@ -26,6 +26,30 @@ export default {
           query character($id: ID!) {
             character(id: $id) {
               name
+              id
+              image
+              gender
+              species
+              status
+              origin {
+                name
+                type
+                dimension
+                residents {
+                  name
+                }
+              }
+              location {
+                name
+                type
+                dimension
+                residents {
+                  name
+                }
+              }
+              episode {
+                air_date
+              }
             }
           }
         `,
