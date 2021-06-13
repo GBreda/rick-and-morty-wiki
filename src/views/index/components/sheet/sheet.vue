@@ -13,9 +13,7 @@
         <div class="content__about-section">
           <h3 class="title">about</h3>
           <p class="container__content--paragraph">
-            {{ character.name }} is a {{ character.gender }}
-            {{ character.species }}. He is {{ character.status }} and well. Last
-            seen in {{ character.episode[0].air_date }}
+            {{ aboutText }}
           </p>
         </div>
         <sheet-section title="origin" :info="character.origin"></sheet-section>

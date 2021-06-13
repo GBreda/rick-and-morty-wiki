@@ -1,5 +1,6 @@
 <template>
   <div class="wrapper">
+    <loading-screen></loading-screen>
     <sheet></sheet>
     <div class="logo center">
       <img

@@ -19,47 +19,59 @@ export default {
     },
   },
   methods: {
-    ...mapActions(['setCharacter', 'toggleCharacterSheet']),
-    async openSheet() {
-      const { data } = await this.$apollo.query({
-        query: gql`
-          query character($id: ID!) {
-            character(id: $id) {
-              name
-              id
-              image
-              gender
-              species
-              status
-              origin {
+    ...mapActions([
+      'setCharacter',
+      'toggleCharacterSheet',
+      'toggleLoadingScreen',
+    ]),
+    openSheet() {
+      this.toggleLoadingScreen(true);
+
+      this.$apollo
+        .query({
+          query: gql`
+            query character($id: ID!) {
+              character(id: $id) {
                 name
-                type
-                dimension
-                residents {
+                id
+                image
+                gender
+                species
+                status
+                origin {
                   name
+                  type
+                  dimension
+                  residents {
+                    name
+                  }
                 }
-              }
-              location {
-                name
-                type
-                dimension
-                residents {
+                location {
                   name
+                  type
+                  dimension
+                  residents {
+                    name
+                  }
                 }
-              }
-              episode {
-                air_date
+                episode {
+                  air_date
+                }
               }
             }
-          }
-        `,
-        variables: {
-          id: this.character.id,
-        },
-      });
-
-      this.setCharacter(data.character);
-      this.toggleCharacterSheet(true);
+          `,
+          variables: {
+            id: this.character.id,
+          },
+        })
+        .then(({ data }) => {
+          this.setCharacter(data.character);
+          this.toggleCharacterSheet(true);
+        })
+        .catch((err) => console.log(err))
+        .finally(() => {
+          this.toggleLoadingScreen(false);
+        });
     },
   },
 };
