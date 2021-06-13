@@ -23,6 +23,7 @@ export default {
       'setCharacter',
       'toggleCharacterSheet',
       'toggleLoadingScreen',
+      'toggleErrorAlert',
     ]),
     openSheet() {
       this.toggleLoadingScreen(true);
@@ -68,7 +69,7 @@ export default {
           this.setCharacter(data.character);
           this.toggleCharacterSheet(true);
         })
-        .catch((err) => console.log(err))
+        .catch(() => this.toggleErrorAlert(true))
         .finally(() => {
           this.toggleLoadingScreen(false);
         });

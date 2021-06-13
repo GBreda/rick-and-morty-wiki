@@ -2,6 +2,7 @@ import gql from 'graphql-tag';
 import Card from './components/card/card.vue';
 import Sheet from './components/sheet/sheet.vue';
 import LoadingScreen from './components/loading-screen/loading-screen.vue';
+import ErrorAlert from './components/error-alert/error-alert.vue';
 import { mapActions } from 'vuex';
 
 export default {
@@ -10,6 +11,7 @@ export default {
     Card,
     Sheet,
     LoadingScreen,
+    ErrorAlert,
   },
   data() {
     return {
@@ -18,7 +20,7 @@ export default {
     };
   },
   methods: {
-    ...mapActions(['toggleLoadingScreen']),
+    ...mapActions(['toggleLoadingScreen', 'toggleErrorAlert']),
     searchCharacter() {
       this.characters = [];
       this.toggleLoadingScreen(true);
@@ -45,7 +47,10 @@ export default {
         .then(({ data }) => {
           this.characters = data.characters.results;
         })
-        .catch((err) => console.log(err))
+        .catch(() => {
+          this.searchInput = '';
+          this.toggleErrorAlert(true);
+        })
         .finally(() => {
           this.toggleLoadingScreen(false);
         });

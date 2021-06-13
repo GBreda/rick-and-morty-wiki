@@ -10,8 +10,13 @@ const toggleLoadingScreen = ({ commit }, payload) => {
   commit('TOGGLE_LOADING_SCREEN', payload);
 };
 
+const toggleErrorAlert = ({ commit }, payload) => {
+  commit('TOGGLE_ERROR_ALERT', payload);
+};
+
 export default {
   setCharacter,
   toggleCharacterSheet,
   toggleLoadingScreen,
+  toggleErrorAlert,
 };

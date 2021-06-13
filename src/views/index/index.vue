@@ -1,5 +1,6 @@
 <template>
   <div class="wrapper">
+    <error-alert></error-alert>
     <loading-screen></loading-screen>
     <sheet></sheet>
     <div class="logo center">

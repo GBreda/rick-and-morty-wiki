@@ -1,6 +1,10 @@
 <template>
   <div v-show="loadingScreen" class="overlay">
-    <img class="image" src="@/assets/img/loading.svg" alt="" />
+    <img
+      class="image"
+      src="@/assets/img/loading.svg"
+      alt="Loading screen logo"
+    />
   </div>
 </template>
 
