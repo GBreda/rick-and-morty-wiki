@@ -4,11 +4,11 @@
     :style="{ backgroundImage: `url(${character.image})` }"
     @click="openSheet"
   >
-    <div class="card__content">
-      <h2 class="card__content__title card__content__title--color">
+    <div class="content">
+      <h2 class="content__title">
         {{ character.name | textShortener }}
       </h2>
-      <p class="card__body__title card__body__title--color">
+      <p class="content__body">
         {{ character.species }}
       </p>
     </div>

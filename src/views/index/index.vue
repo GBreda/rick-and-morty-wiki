@@ -1,9 +1,14 @@
 <template>
-  <div class="container">
-    <div class="container__logo">
-      <img src="../../assets/img/logo.svg" alt="Rick and Morty logo" />
+  <div class="wrapper">
+    <sheet></sheet>
+    <div class="logo center">
+      <img
+        class="logo__image"
+        src="@/assets/img/logo.svg"
+        alt="Rick and Morty logo"
+      />
     </div>
-    <div class="container__search search">
+    <div class="search center">
       <form @submit.prevent="searchCharacter">
         <input
           class="search__input"
@@ -11,11 +16,12 @@
           type="text"
           v-model="searchInput"
         />
-        <button class="button">Search</button>
+        <button tabindex="0" class="button" @click="searchCharacter">
+          Search
+        </button>
       </form>
     </div>
-    <sheet></sheet>
-    <div class="container__cards">
+    <div class="cards">
       <card
         v-for="character in characters"
         :character="character"

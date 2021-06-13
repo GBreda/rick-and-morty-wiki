@@ -1,0 +1,22 @@
+.sheet-card {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 500px;
+  margin-top: 20px;
+  border-radius: 8px;
+  border: 2px solid $border-color;
+  position: absolute;
+  width: 100%;
+  right: 45px;
+
+  &__content {
+    color: $white;
+    background-color: $black;
+    padding: 5px 0 5px 15px;
+    border-radius: 0 0 6px 6px;
+  }
+}

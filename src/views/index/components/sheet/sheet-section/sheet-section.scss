@@ -1,0 +1,23 @@
+.section {
+  &:not(:last-child) {
+    margin-bottom: 60px;
+  }
+
+  &__type {
+    color: $gray;
+    font-size: 14px;
+  }
+
+  &__name {
+    font-size: 28px;
+  }
+
+  &__dimension {
+    font-size: 18px;
+  }
+
+  &__residents {
+    color: $gray;
+    font-size: 14px;
+  }
+}
