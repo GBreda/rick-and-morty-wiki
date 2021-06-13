@@ -1,5 +1,6 @@
 <template>
   <div
+    tabindex="0"
     class="card"
     :style="{ backgroundImage: `url(${character.image})` }"
     @click="openSheet"

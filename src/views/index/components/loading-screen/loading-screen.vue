@@ -1,8 +1,9 @@
 <template>
-  <div v-show="loadingScreen" class="overlay">
+  <div v-if="loadingScreen" class="loading-screen">
     <img
-      class="image"
-      src="@/assets/img/loading.svg"
+      rel="preload"
+      class="loading-screen__image"
+      src="@/assets/img/loading.jpg"
       alt="Loading screen logo"
     />
   </div>

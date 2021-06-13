@@ -1,6 +1,6 @@
 <template>
   <transition name="alert">
-    <div class="error-alert" v-show="errorAlert">
+    <div class="error-alert" v-if="errorAlert">
       <p class="error-alert__message">Error!</p>
       <img
         @click="toggleErrorAlert(false)"

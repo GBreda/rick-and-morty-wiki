@@ -1,5 +1,5 @@
 <template>
-  <div class="overlay" v-show="isCharacterSheetOpen">
+  <div class="overlay" v-if="isCharacterSheetOpen">
     <div class="sheet">
       <div class="card" :style="{ backgroundImage: `url(${character.image})` }">
         <div class="card--back-drop">

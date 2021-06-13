@@ -37,3 +37,62 @@
   grid-gap: 30px;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
+
+@media screen and (max-width: 1300px) {
+  .cards {
+    margin: 100px 180px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .logo {
+    &__image {
+      margin-top: 0;
+    }
+  }
+
+  .search {
+    margin-top: 50px;
+  }
+
+  .cards {
+    margin: 50px 90px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .cards {
+    margin: 50px 70px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .logo {
+    &__image {
+      width: 80%;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .search {
+    &__form {
+      display: flex;
+      justify-content: center;
+      width: 80%;
+    }
+
+    &__input {
+      width: 60%;
+      padding: 10px;
+
+      &::placeholder {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .cards {
+    margin-top: 50px;
+  }
+}

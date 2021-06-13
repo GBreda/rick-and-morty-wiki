@@ -11,7 +11,7 @@
       />
     </div>
     <div class="search center">
-      <form @submit.prevent="searchCharacter">
+      <form class="search__form" @submit.prevent="searchCharacter">
         <input
           class="search__input"
           placeholder="Search Characters"
