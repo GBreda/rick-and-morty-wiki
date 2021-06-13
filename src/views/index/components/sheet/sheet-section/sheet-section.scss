@@ -19,5 +19,21 @@
   &__residents {
     color: $gray;
     font-size: 14px;
+
+    &--text {
+      margin-left: 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .section {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &__name {
+      font-size: 20px;
+    }
   }
 }

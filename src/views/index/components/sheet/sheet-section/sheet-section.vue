@@ -6,8 +6,11 @@
     <p class="section__dimension">
       {{ info.dimension }}
     </p>
-    <span class="section__residents"
-      >{{ info.residents.length }} residents</span
+    <span class="section__residents">
+      <img src="@/assets/img/people-icon.svg" alt="People icon" /><span
+        class="section__residents--text"
+        >{{ info.residents.length }} residents</span
+      ></span
     >
   </div>
 </template>

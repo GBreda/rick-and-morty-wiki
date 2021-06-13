@@ -35,3 +35,45 @@
     backdrop-filter: blur(12px) brightness(0.5);
   }
 }
+
+@media screen and (max-width: 1600px) {
+  .sheet {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .sheet {
+    grid-template-columns: 300px 1fr;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .sheet {
+    margin-top: 150px;
+    grid-template-columns: none;
+    grid-template-rows: 60px 1fr;
+    border-radius: 16px;
+  }
+
+  .card {
+    border-radius: 16px 16px 0 0;
+
+    &__button {
+      margin: 20px;
+    }
+
+    &--back-drop {
+      border-radius: 16px 16px 0 0;
+      backdrop-filter: blur(12px) brightness(0.5);
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .content {
+    &__about-section {
+      margin-bottom: 20px;
+    }
+  }
+}

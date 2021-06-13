@@ -18,5 +18,31 @@
     background-color: $black;
     padding: 5px 0 5px 15px;
     border-radius: 0 0 6px 6px;
+
+    &--title {
+      font-size: 20px;
+      font-weight: $bold;
+    }
+
+    &--body {
+      font-size: 12px;
+    }
+  }
+}
+
+img {
+  path {
+    fill: #fff;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .sheet-card {
+    height: 200px;
+    width: 200px;
+    top: -100px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
   }
 }
