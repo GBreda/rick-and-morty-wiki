@@ -1,24 +1,47 @@
-# rick-and-morty-wiki
+# Rick and Morty wiki project
 
-## Project setup
+## Used tecnologies
+- [Vue.js](https://vuejs.org/)
+- [Vue Apollo](https://apollo.vuejs.org/)
+- [SASS](https://sass-lang.com/)
+- [BEM](http://getbem.com/introduction/)
+- [Travis CI](https://www.travis-ci.com/)
+
+## Local Development
+
+### Project setup
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+#### Compiles and hot-reloads for development
 ```
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
+#### Lints and fixes files
 ```
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+#### Unit testing
+```
+npm run test:unit
+```
+
+#### E2E testing
+```
+npm run test:e2e
+```
+
+## Production Build
+
+#### Compiles and minifies
+```
+npm run build
+```
+The result can be found at `dist` directory
+
+## Roadmap
+- Apply unit testing
+- Apply E2E testing
+- Run E2E testing through pipeline
