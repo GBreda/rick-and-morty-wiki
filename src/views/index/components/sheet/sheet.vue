@@ -3,6 +3,12 @@
     <div class="sheet">
       <div class="card" :style="{ backgroundImage: `url(${character.image})` }">
         <div class="card--back-drop">
+          <img
+            @click="closeSheet"
+            class="mobile-button"
+            src="@/assets/img/close-white.svg"
+            alt="Close icon"
+          />
           <button class="button card__button" @click="closeSheet">
             Close
           </button>

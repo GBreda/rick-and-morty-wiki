@@ -1,11 +1,14 @@
 <template>
   <div v-if="loadingScreen" class="loading-screen">
-    <img
-      rel="preload"
-      class="loading-screen__image"
-      src="@/assets/img/loading.jpg"
-      alt="Loading screen logo"
-    />
+    <div>
+      <img
+        rel="preload"
+        class="loading-screen__image"
+        src="@/assets/img/loading.jpg"
+        alt="Loading screen logo"
+      />
+      <p class="loading-screen--text">Loading</p>
+    </div>
   </div>
 </template>
 

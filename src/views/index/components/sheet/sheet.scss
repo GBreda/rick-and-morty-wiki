@@ -36,6 +36,11 @@
   }
 }
 
+.mobile-button {
+  margin-left: 10px;
+  width: 16px;
+}
+
 @media screen and (max-width: 1600px) {
   .sheet {
     width: 70%;
@@ -63,6 +68,8 @@
     }
 
     &--back-drop {
+      display: flex;
+      align-items: center;
       border-radius: 16px 16px 0 0;
       backdrop-filter: blur(12px) brightness(0.5);
     }
@@ -70,6 +77,16 @@
 
   .content {
     margin: 60px 30px 30px 30px;
+  }
+
+  .button {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .mobile-button {
+    display: none;
   }
 }
 
@@ -80,7 +97,7 @@
 
   .content {
     &__about-section {
-      margin-bottom: 20px;
+      margin-bottom: 40px;
     }
   }
 }

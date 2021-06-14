@@ -8,10 +8,17 @@
   bottom: 0;
   left: 0;
   z-index: 2;
+  background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(20px);
 
   &__image {
     border: 2px solid $border-color;
     border-radius: 8px;
+  }
+
+  &--text {
+    font-size: 24px;
+    color: $white;
+    text-align: center;
   }
 }
