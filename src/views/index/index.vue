@@ -18,12 +18,17 @@
           type="text"
           v-model="searchInput"
         />
-        <button tabindex="0" class="button" @click="searchCharacter">
+        <button
+          data-cy="search-button"
+          tabindex="0"
+          class="button"
+          @click="searchCharacter"
+        >
           Search
         </button>
       </form>
     </div>
-    <div class="cards">
+    <div class="cards" data-cy="cards">
       <card
         v-for="character in characters"
         :character="character"
