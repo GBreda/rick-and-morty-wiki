@@ -2,20 +2,22 @@ language: node_js
 node_js:
   - 'node'
 
-cache: npm
+cache:
+  directories:
+    - node_modules
 
 install:
   - npm ci
 
 script:
   - npm run lint
-  - npm run test
+  - npm run test:unit
   - npm run build
+  - npm install netlify-cli -g
 
 deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN
-  local_dir: dist
+  provider: script
+  edge: true
+  script: netlify deploy --dir=dist --prod
   on:
     branch: master
