@@ -1,4 +1,8 @@
+[![Build Status](https://www.travis-ci.com/GBreda/rick-and-morty-wiki.svg?branch=master)](https://www.travis-ci.com/GBreda/rick-and-morty-wiki)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ce408ade-2d0b-4a0d-aecf-9878f30748e6/deploy-status)](https://app.netlify.com/sites/rick-and-morty-wikii/deploys)
 # Rick and Morty wiki project
+
+Project url: https://rick-and-morty-wikii.netlify.app/
 
 ## Used tecnologies
 - [Vue.js](https://vuejs.org/)
