@@ -50,7 +50,6 @@
 
 @media screen and (max-width: 1000px) {
   .sheet {
-    margin-top: 150px;
     grid-template-columns: none;
     grid-template-rows: 60px 1fr;
     border-radius: 16px;
@@ -68,9 +67,17 @@
       backdrop-filter: blur(12px) brightness(0.5);
     }
   }
+
+  .content {
+    margin: 60px 30px 30px 30px;
+  }
 }
 
 @media screen and (max-width: 600px) {
+  .sheet {
+    width: 85%;
+  }
+
   .content {
     &__about-section {
       margin-bottom: 20px;

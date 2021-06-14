@@ -10,4 +10,13 @@ export default {
       required: true,
     },
   },
+  methods: {
+    unknownText(field, suffix = null) {
+      if (this.info[field] && this.info[field] !== 'unknown') {
+        return this.info[field];
+      }
+
+      return `Unknown ${suffix}`;
+    },
+  },
 };
